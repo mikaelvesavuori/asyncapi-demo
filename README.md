@@ -1,5 +1,10 @@
 # AsyncAPI demo
 
-Run `npm install`, then `npm start`.
+Run `npm run setup` to put things in order.
 
-Start the project in the 'output' folder, and in a second terminal, run 'npm run publish:[in]valid'
+Then start the project in the 'output' folder, and in a second terminal, run 'npm run publish:[in]valid'.
+
+## References
+
+- [https://github.com/asyncapi/generator](https://github.com/asyncapi/generator)
+- [https://github.com/asyncapi/nodejs-template](https://github.com/asyncapi/nodejs-template)
