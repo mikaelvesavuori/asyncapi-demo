@@ -4,13 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "setup": "npm install && npm run create:demo && npm run display:message",
     "start": "npx ag asyncapi.yaml @asyncapi/nodejs-template -o output -p server=production",
-    "build": "npx ag https://bit.ly/asyncapi @asyncapi/nodejs-template -o output -p server=production"
+    "display:message": "echo Start the project in the 'output' folder, and in a second terminal, run 'npm run publish:[in]valid'",
+    "create:demo": "npx ag https://bit.ly/asyncapi @asyncapi/nodejs-template -o output -p server=production",
+    "publish:valid": "npx mqtt pub -t 'smartylighting/streetlights/1/0/event/123/lighting/measured' -h 'test.mosquitto.org' -m '{\"id\": 1, \"lumens\": 3, \"sentAt\": \"2017-06-07T12:34:32.000Z\"}'",
+    "publish:invalid": "mqtt pub -t 'smartylighting/streetlights/1/0/event/123/lighting/measured' -h 'test.mosquitto.org' -m '{\"id\": 1, \"lumens\": \"3\", \"sentAt\": \"2017-06-07T12:34:32.000Z\"}'"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@asyncapi/generator": "^1.8.0"
+    "@asyncapi/generator": "^1.8.0",
+    "mqtt": "^4.2.8"
   }
 }
