@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npx ag asyncapi.yaml @asyncapi/nodejs-template -o output -p server=production"
+    "start": "npx ag asyncapi.yaml @asyncapi/nodejs-template -o output -p server=production",
+    "build": "npx ag https://bit.ly/asyncapi @asyncapi/nodejs-template -o output -p server=production"
   },
   "keywords": [],
   "author": "",
