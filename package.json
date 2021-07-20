@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npx ag asyncapi.yaml @asyncapi/nodejs-template -o output -p server=production"
   },
   "keywords": [],
   "author": "",
